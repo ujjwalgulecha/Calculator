@@ -15,7 +15,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends ActionBarActivity {
 
 
-    Button addButton,subButton,mulButton;
+    Button addButton,subButton,mulButton,divButton;
     TextView answer_display;
     EditText v1,v2;
 
@@ -27,11 +27,10 @@ public class MainActivity extends ActionBarActivity {
         addButton = (Button) findViewById(R.id.add_button);
         subButton = (Button) findViewById(R.id.sub_button);
         mulButton = (Button) findViewById(R.id.mul_button);
+        divButton = (Button) findViewById(R.id.div_button);
         answer_display = (TextView) findViewById(R.id.result_display);
         v1 = (EditText) findViewById(R.id.value1);
         v2 = (EditText) findViewById(R.id.value2);
-
-
     }
 
     @Override
@@ -60,30 +59,96 @@ public class MainActivity extends ActionBarActivity {
 
         String val1 = v1.getText().toString();
         String val2 = v2.getText().toString();
-        int v1 = Integer.parseInt(val1);
-        int v2 = Integer.parseInt(val2);
-        int res = v1+v2;
-        String ans = Integer.toString(res);
-        answer_display.setText(ans);
+        if(val1.length()==0 && val2.length()==0)
+        {
+            answer_display.setText(" ");
+        }
+        else if(val1.length()==0)
+        {
+            answer_display.setText(val2);
+        }
+        else if(val2.length()==0)
+        {
+            answer_display.setText(val1);
+        }
+        else {
+        double v1 = Double.parseDouble(val1);
+        double v2 = Double.parseDouble(val2);
+        double res = v1+v2;
+        String ans = Double.toString(res);
+        answer_display.setText(ans);}
     }
 
     public void Sub(View view) {
         String val1 = v1.getText().toString().trim();
         String val2 = v2.getText().toString().trim();
-        int v1 = Integer.parseInt(val1);
-        int v2 = Integer.parseInt(val2);
-        int res = v1-v2;
-        String ans = Integer.toString(res);
-        answer_display.setText(ans);
+        if(val1.length()==0 && val2.length()==0)
+        {
+            answer_display.setText(" ");
+        }
+        else if(val1.length()==0)
+        {
+            answer_display.setText(val2);
+        }
+        else if(val2.length()==0)
+        {
+            answer_display.setText(val1);
+        }
+        else {
+        double v1 = Double.parseDouble(val1);
+        double v2 = Double.parseDouble(val2);
+        double res = v1-v2;
+        String ans = Double.toString(res);
+        answer_display.setText(ans);}
     }
 
     public void Mul(View view) {
         String val1 = v1.getText().toString().trim();
         String val2 = v2.getText().toString().trim();
-        int v1 = Integer.parseInt(val1);
-        int v2 = Integer.parseInt(val2);
-        int res = v1*v2;
-        String ans = Integer.toString(res);
-        answer_display.setText(ans);
+        if(val1.length()==0 && val2.length()==0)
+        {
+            answer_display.setText(" ");
+        }
+        else if(val1.length()==0)
+        {
+            answer_display.setText(val2);
+        }
+        else if(val2.length()==0)
+        {
+            answer_display.setText(val1);
+        }
+        else {
+            Double v1 = Double.parseDouble(val1);
+            Double v2 = Double.parseDouble(val2);
+            Double res = v1 * v2;
+            String ans = Double.toString(res);
+            answer_display.setText(ans);
+        }
+    }
+
+    public void Div(View view) {
+
+        String val1 = v1.getText().toString().trim();
+        String val2 = v2.getText().toString().trim();
+        if(val1.length()==0 && val2.length()==0)
+        {
+            answer_display.setText(" ");
+        }
+        else if(val1.length()==0)
+        {
+            answer_display.setText(val2);
+        }
+        else if(val2.length()==0)
+        {
+            answer_display.setText(val1);
+        }
+        else {
+            double v1 = Double.parseDouble(val1);
+            double v2 = Double.parseDouble(val2);
+            double res = v1 / v2;
+            String ans = Double.toString(res);
+            answer_display.setText(ans);
+        }
+
     }
 }

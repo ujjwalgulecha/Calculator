@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/value1"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="70dp"
             android:layout_marginRight="20dp"
             android:hint="Value1"
             android:gravity="center"
@@ -53,6 +53,12 @@
             android:id="@+id/mul_button"
             android:onClick="Mul"
             />
+        <Button
+            android:text="DIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/div_button"
+            android:onClick="Div"/>
         </LinearLayout>
 
     <TextView
