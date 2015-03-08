@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+
 
 
 public class MainActivity extends ActionBarActivity {
@@ -132,7 +132,7 @@ public class MainActivity extends ActionBarActivity {
         String val2 = v2.getText().toString().trim();
         if(val1.length()==0 && val2.length()==0)
         {
-            answer_display.setText(" ");
+            answer_display.setText("  ");
         }
         else if(val1.length()==0)
         {
