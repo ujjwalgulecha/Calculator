@@ -59,6 +59,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/div_button"
             android:onClick="Div"/>
+
         </LinearLayout>
 
     <TextView
