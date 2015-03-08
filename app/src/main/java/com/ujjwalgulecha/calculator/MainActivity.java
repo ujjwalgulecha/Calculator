@@ -1,5 +1,6 @@
 package com.ujjwalgulecha.calculator;
 
+import android.app.DialogFragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -46,6 +47,13 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            DialogFragment myFragment = new myDialogFragment();
+            myFragment.show(getFragmentManager(),"theDialog");
+            return true;
+        }
+        else if(id == R.id.exit_the_app)
+        {
+            finish();
             return true;
         }
 
