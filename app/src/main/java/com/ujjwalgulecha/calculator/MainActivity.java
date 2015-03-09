@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -63,70 +64,72 @@ public class MainActivity extends ActionBarActivity {
 
         String val1 = v1.getText().toString();
         String val2 = v2.getText().toString();
-        if(val1.length()==0 && val2.length()==0)
+        if(val1.matches("-?\\d+(\\.\\d+)?")==false || val2.matches("-?\\d+(\\.\\d+)?")==false)
         {
-            answer_display.setText(" ");
-        }
-        else if(val1.length()==0)
-        {
-            answer_display.setText(val2);
-        }
-        else if(val2.length()==0)
-        {
-            answer_display.setText(val1);
+            Toast.makeText(getApplicationContext(),"Numbers Only!",Toast.LENGTH_SHORT).show();
         }
         else {
-        double v1 = Double.parseDouble(val1);
-        double v2 = Double.parseDouble(val2);
-        double res = v1+v2;
-        String ans = Double.toString(res);
-        answer_display.setText(ans);}
+            if (val1.length() == 0 && val2.length() == 0) {
+                answer_display.setText(" ");
+            } else if (val1.length() == 0) {
+                answer_display.setText(val2);
+            } else if (val2.length() == 0) {
+                answer_display.setText(val1);
+            } else {
+                double v1 = Double.parseDouble(val1);
+                double v2 = Double.parseDouble(val2);
+                double res = v1 + v2;
+                String ans = Double.toString(res);
+                answer_display.setText(ans);
+            }
+        }
     }
 
     public void Sub(View view) {
         String val1 = v1.getText().toString().trim();
         String val2 = v2.getText().toString().trim();
-        if(val1.length()==0 && val2.length()==0)
+        if(val1.matches("-?\\d+(\\.\\d+)?")==false || val2.matches("-?\\d+(\\.\\d+)?")==false)
         {
-            answer_display.setText(" ");
-        }
-        else if(val1.length()==0)
-        {
-            answer_display.setText(val2);
-        }
-        else if(val2.length()==0)
-        {
-            answer_display.setText(val1);
+            Toast.makeText(getApplicationContext(), "Numbers Only!", Toast.LENGTH_SHORT).show();
         }
         else {
-        double v1 = Double.parseDouble(val1);
-        double v2 = Double.parseDouble(val2);
-        double res = v1-v2;
-        String ans = Double.toString(res);
-        answer_display.setText(ans);}
+            if (val1.length() == 0 && val2.length() == 0) {
+                answer_display.setText(" ");
+            } else if (val1.length() == 0) {
+                answer_display.setText(val2);
+            } else if (val2.length() == 0) {
+                answer_display.setText(val1);
+            } else {
+                double v1 = Double.parseDouble(val1);
+                double v2 = Double.parseDouble(val2);
+                double res = v1 - v2;
+                String ans = Double.toString(res);
+                answer_display.setText(ans);
+            }
+        }
     }
 
     public void Mul(View view) {
         String val1 = v1.getText().toString().trim();
         String val2 = v2.getText().toString().trim();
-        if(val1.length()==0 && val2.length()==0)
+        if(val1.matches("-?\\d+(\\.\\d+)?")==false || val2.matches("-?\\d+(\\.\\d+)?")==false)
         {
-            answer_display.setText(" ");
-        }
-        else if(val1.length()==0)
-        {
-            answer_display.setText(val2);
-        }
-        else if(val2.length()==0)
-        {
-            answer_display.setText(val1);
+            Toast.makeText(getApplicationContext(), "Numbers Only!", Toast.LENGTH_SHORT).show();
         }
         else {
-            Double v1 = Double.parseDouble(val1);
-            Double v2 = Double.parseDouble(val2);
-            Double res = v1 * v2;
-            String ans = Double.toString(res);
-            answer_display.setText(ans);
+            if (val1.length() == 0 && val2.length() == 0) {
+                answer_display.setText(" ");
+            } else if (val1.length() == 0) {
+                answer_display.setText(val2);
+            } else if (val2.length() == 0) {
+                answer_display.setText(val1);
+            } else {
+                Double v1 = Double.parseDouble(val1);
+                Double v2 = Double.parseDouble(val2);
+                Double res = v1 * v2;
+                String ans = Double.toString(res);
+                answer_display.setText(ans);
+            }
         }
     }
 
@@ -134,25 +137,24 @@ public class MainActivity extends ActionBarActivity {
 
         String val1 = v1.getText().toString().trim();
         String val2 = v2.getText().toString().trim();
-        if(val1.length()==0 && val2.length()==0)
+        if(val1.matches("-?\\d+(\\.\\d+)?")==false || val2.matches("-?\\d+(\\.\\d+)?")==false)
         {
-            answer_display.setText("  ");
-        }
-        else if(val1.length()==0)
-        {
-            answer_display.setText(val2);
-        }
-        else if(val2.length()==0)
-        {
-            answer_display.setText(val1);
+            Toast.makeText(getApplicationContext(), "Numbers Only!", Toast.LENGTH_SHORT).show();
         }
         else {
-            double v1 = Double.parseDouble(val1);
-            double v2 = Double.parseDouble(val2);
-            double res = v1 / v2;
-            String ans = Double.toString(res);
-            answer_display.setText(ans);
+            if (val1.length() == 0 && val2.length() == 0) {
+                answer_display.setText("  ");
+            } else if (val1.length() == 0) {
+                answer_display.setText(val2);
+            } else if (val2.length() == 0) {
+                answer_display.setText(val1);
+            } else {
+                double v1 = Double.parseDouble(val1);
+                double v2 = Double.parseDouble(val2);
+                double res = v1 / v2;
+                String ans = Double.toString(res);
+                answer_display.setText(ans);
+            }
         }
-
     }
 }
