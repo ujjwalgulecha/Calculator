@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/value1"
             android:layout_marginLeft="70dp"
@@ -21,47 +21,13 @@
             android:hint="Value1"
             android:gravity="center"
             android:layout_gravity="center"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/value2"
-            android:hint="Value2"
-            android:gravity="center"
-            android:layout_gravity="center"/>
-        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <Button
-            android:text="ADD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/add_button"
-            android:onClick="Add"
-            />
-        <Button
-            android:text="SUB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sub_button"
-            android:onClick="Sub"
-            />
-        <Button
-            android:text="MUL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/mul_button"
-            android:onClick="Mul"
-            />
-        <Button
-            android:text="DIV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/div_button"
-            android:onClick="Div"/>
 
-        </LinearLayout>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,5 +36,194 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:id="@+id/result_display"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/button7"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="clickSeven"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:id="@+id/button8"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:onClick="clickEight"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:id="@+id/button9"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="clickNine"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/button4"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="clickFour"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/button5"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="clickFive"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:id="@+id/button6"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="clickSix"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:id="@+id/buttonMultiply"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:onClick="clickMultiply"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/button1"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="clickOne"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/button2"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="clickTwo"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/button3"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="clickThree"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/buttonSubtract"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:onClick="clickSubtract"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:id="@+id/buttondot"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:onClick="clickDot"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/button0"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:onClick="clickZero"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:id="@+id/buttonequal"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:onClick="clickEqual"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/buttonAdd"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:onClick="clickAdd"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:id="@+id/buttonclear"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:onClick="clickClear"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="&lt;-"
+            android:id="@+id/buttonback"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:onClick="clickBack"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/buttonDivide"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:onClick="clickDivide"/>
+
+    </GridLayout>
 
 </LinearLayout>
