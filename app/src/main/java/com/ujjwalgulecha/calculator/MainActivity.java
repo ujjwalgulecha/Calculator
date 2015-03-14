@@ -1,21 +1,21 @@
 package com.ujjwalgulecha.calculator;
 
 import android.app.DialogFragment;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
+
 
 public class MainActivity extends ActionBarActivity {
 
     public String firstValue=" ";
     public int flag=1;
 
-    TextView answer_display;
-    EditText v1,v2;
+
+    TextView answer_display,v1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
 
 
         answer_display = (TextView) findViewById(R.id.result_display);
-        v1 = (EditText) findViewById(R.id.value1);
+        v1 = (TextView) findViewById(R.id.value1);
 
     }
 
@@ -67,7 +67,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickEight(View view) {
@@ -81,7 +81,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickNine(View view) {
@@ -95,7 +95,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickFour(View view) {
@@ -109,7 +109,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickFive(View view) {
@@ -123,7 +123,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickSix(View view) {
@@ -137,7 +137,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickOne(View view) {
@@ -151,7 +151,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickTwo(View view) {
@@ -165,7 +165,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickThree(View view) {
@@ -179,7 +179,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickZero(View view) {
@@ -193,7 +193,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickDot(View view) {
@@ -207,7 +207,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
     }
 
     public void clickClear(View view) {
@@ -229,7 +229,7 @@ public class MainActivity extends ActionBarActivity {
             String abc = firstValue.substring(0,firstValue.length()-1);
             firstValue = abc;
             v1.setText(firstValue);
-            v1.setSelection(v1.getText().length());
+
         }
 
     }
@@ -239,6 +239,9 @@ public class MainActivity extends ActionBarActivity {
         Double answer = evaluate(firstValue);
         String a = Double.toString(answer);
         answer_display.setText(a);
+        v1.setText(firstValue);
+        firstValue = a;
+
 
     }
     public static double evaluate(final String str) {
@@ -343,7 +346,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
 
     }
     public void clickSubtract(View view) {
@@ -357,7 +360,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
 
     }
     public void clickMultiply(View view) {
@@ -371,7 +374,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
 
     }
 
@@ -386,8 +389,36 @@ public class MainActivity extends ActionBarActivity {
         }
 
         v1.setText(firstValue);
-        v1.setSelection(v1.getText().length());
+
 
     }
 
+    public void clickLeftP(View view) {
+
+        if(flag==1) {
+            firstValue = "(";
+            flag=0;
+        }
+        else
+        {
+            firstValue  = firstValue + "(";
+        }
+
+        v1.setText(firstValue);
+
+    }
+
+    public void clickRightP(View view) {
+        if(flag==1) {
+            firstValue = ")";
+            flag=0;
+        }
+        else
+        {
+            firstValue  = firstValue + ")";
+        }
+
+        v1.setText(firstValue);
+
+    }
 }
