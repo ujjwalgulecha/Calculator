@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -237,7 +239,10 @@ public class MainActivity extends ActionBarActivity {
     public void clickEqual(View view) {
 
         Double answer = evaluate(firstValue);
-        String a = Double.toString(answer);
+        NumberFormat nf = NumberFormat.getNumberInstance() ; //we get the instance of the number
+        nf.setGroupingUsed(false) ; // don't group by threes
+        nf.setMaximumFractionDigits(10) ; //we set the max number of decimal digits.
+        String a = nf.format(answer);
         answer_display.setText(a);
         v1.setText(firstValue);
         firstValue = a;
